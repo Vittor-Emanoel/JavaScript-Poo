@@ -1,0 +1,24 @@
+{
+  "name": "javascript-poo",
+  "version": "1.0.0",
+  "description": "Curso de Programação orientada a objetos JavaScript da ALURA.",
+  "type": "module",
+  "main": "User.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vittor-Emanoel/JavaScript-Poo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vittor-Emanoel/JavaScript-Poo/issues"
+  },
+  "homepage": "https://github.com/Vittor-Emanoel/JavaScript-Poo#readme"
+}
