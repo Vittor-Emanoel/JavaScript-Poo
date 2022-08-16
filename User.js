@@ -1,15 +1,21 @@
 //CLASSE SUPER - MOLDE
 
 export default class User {
+    //# definir classe privada
+    #nome
     constructor(nome, email, nascimento, role, ativo = true){
-        this.nome = nome
+        this.#nome = nome
         this.email = email
         this.nascimento = nascimento
         this.role = role || 'Estudante';
         this.ativo = ativo
     }
+    /*metodo estático
+    static exibirInfos(){
+        return 'olá';
+    }*/
     exibirInfos() {
-        return `${this.nome}, ${this.email}`
+        return `${this.#nome}, ${this.email}`
     }
 
  }
