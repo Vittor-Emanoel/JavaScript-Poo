@@ -3,19 +3,34 @@
 export default class User {
     //# definir classe privada
     #nome
+    #email
+    #nascimento
+    #role
+    #ativo
     constructor(nome, email, nascimento, role, ativo = true){
         this.#nome = nome
-        this.email = email
-        this.nascimento = nascimento
-        this.role = role || 'Estudante';
-        this.ativo = ativo
+        this.#email = email
+        this.#nascimento = nascimento
+        this.#role = role || 'Estudante';
+        this.#ativo = ativo
+    }
+//privado!
+    #montaObjUser() {
+        return({
+            nome: this.#nome,
+            email: this.#email,
+            nascimento: this.#nascimento,
+            role: this.#role,
+            avito: this.#ativo,
+        })
     }
     /*metodo estático
     static exibirInfos(){
         return 'olá';
     }*/
     exibirInfos() {
-        return `${this.#nome}, ${this.email}`
+        const objetoUser = this.#montaObjUser() //chamando objeto privado
+        return `${objetoUser.nome}, ${objetoUser.email}, ${objetoUser.nascimento}. ${objetoUser.role}, ${objetoUser.avito} `
     }
 
  }
