@@ -14,28 +14,22 @@ const pegaLocalização = () => {
       .then((data) => {
         console.log(data.current.weather);
         cord.textContent = data.current.weather.icon;
-
       });
   });
-}
+};
 
-const api = "9a2d0dcb377a2b9768789a742be3acc8";
+const [weatherForecast, setWeatherForecast] = useState(null);
 
-
-  const [weatherForecast, setWeatherForecast] = useState(null);
-
-
-
-  const handleSearch = () => {
-    fetch(
-      `https://api.weatherapi.com/v1/current.json?key=216f85b50529409c975122741221908&q=${city}&lang=pt`
-    )
-      .then((response) => {
-        if (response.status === 200) {
-          return response.json();
-        }
-      })
-      .then((data) => {
-        setWeatherForecast(data);
-      });
-  };
+const handleSearch = () => {
+  fetch(
+    `https://api.weatherapi.com/v1/current.json?key=216f85b50529409c975122741221908&q=${city}&lang=pt`
+  )
+    .then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      }
+    })
+    .then((data) => {
+      setWeatherForecast(data);
+    });
+};
