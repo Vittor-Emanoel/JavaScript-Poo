@@ -50,7 +50,7 @@ export default class User {
   //protege
   //encadeia açoes
   //modifica as propriedades.
-  set nome(novoNome) {
+    set nome(novoNome) {
     if (novoNome === "") {
       throw new console.error("Formato inválido!");
     }
@@ -63,7 +63,7 @@ export default class User {
   exibirInfos() {
     //const objetoUser = this.#montaObjUser(); //chamando objeto privado
     return `${this.nome}, ${this.email}, ${this.nascimento}. ${this.role}, ${this.ativo} `;
-  }
+  } 
 }
 
 /*
